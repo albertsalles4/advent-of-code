@@ -19,7 +19,7 @@ some example test data
 )
 
 if __name__ == "__main__":
-    assert part_a(test_data) == "expected test result a"
-    assert part_b(test_data) == "expected test result b"
+    assert part_a(test_data) is None
+    assert part_b(test_data) is None
     print(part_a(aoc_data))
     print(part_b(aoc_data))
