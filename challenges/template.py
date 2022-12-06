@@ -11,12 +11,10 @@ def part_b(data):
     pass
 
 
-aoc_data = get_data(day=DAY, year=YEAR).split("\n")
+aoc_data = get_data(day=DAY, year=YEAR).splitlines()
 test_data = """\
 some example test data
-""".split(
-    "\n"
-)
+""".splitlines()
 
 if __name__ == "__main__":
     assert part_a(test_data) is None
