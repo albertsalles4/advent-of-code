@@ -8,6 +8,7 @@ def convert_to_graph(data):
     start = end = []
     for i in range(len(data)):
         for j in range(len(data[i])):
+            graph[(i, j)] = []
             if data[i][j] == "S":
                 start = (i, j)
                 letter = "a"
@@ -24,7 +25,7 @@ def convert_to_graph(data):
                     elif xy_letter == "E":
                         xy_letter = "z"
                     if ord(letter) + 1 >= ord(xy_letter):
-                        graph.setdefault((i, j), []).append((x, y))
+                        graph[(i, j)].append((x, y))
 
     return graph, start, end
 
